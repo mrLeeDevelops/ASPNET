@@ -18,9 +18,8 @@ namespace Testing.Controllers
 
         public IActionResult Index()
         {
-            
-            return View();
-
+            var products = repo.GetAllProducts();
+            return View(products);
         }
     }
 }
